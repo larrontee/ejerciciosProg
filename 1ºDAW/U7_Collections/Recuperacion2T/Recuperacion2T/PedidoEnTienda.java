@@ -28,4 +28,9 @@ public class PedidoEnTienda extends Pedido {
                 ", direccionTienda='" + direccionTienda + '\'' +
                 '}';
     }
+
+    @Override
+    public int compareTo(Pedido o) {
+        return (int)this.precioTotal()-(int)o.precioTotal();
+    }
 }

@@ -1,16 +1,20 @@
 package Recuperacion2T;
 
-import java.util.Set;
+import java.io.Serializable;
 
-public class PedidoOnline extends Pedido implements Login {
-    String ipNav;
-    Pago metodoPago;
 
+
+public class PedidoOnline extends Pedido implements Log, Serializable{
+
+    private Pago metodoPago;
+    private String ipNav;
     public PedidoOnline(int idPedido, String fechaEnvio, String fechaEntrega, String ipNav, Pago metodoPago) {
         super(idPedido, fechaEnvio, fechaEntrega);
         this.ipNav = ipNav;
         this.metodoPago = metodoPago;
     }
+
+
 
     public String getIpNav() {
         return ipNav;
@@ -41,5 +45,12 @@ public class PedidoOnline extends Pedido implements Login {
     }
 
 
+    @Override
+    public int compareTo(Pedido o) {
+        return (int)this.precioTotal()-(int)o.precioTotal();}
 
+    @Override
+    public void printLog(PedidoOnline p) {
+        Log.super.printLog(p);
+    }
 }

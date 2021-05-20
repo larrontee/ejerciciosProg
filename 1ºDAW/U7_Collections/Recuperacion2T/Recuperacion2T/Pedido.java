@@ -1,8 +1,9 @@
 package Recuperacion2T;
 
+import java.io.Serializable;
 import java.util.*;
 
-public abstract class Pedido {
+public abstract class Pedido implements Serializable, Comparable<Pedido>{
     int idPedido;
     Set<Producto> listaProductos;
     String fechaEnvio;
@@ -43,15 +44,14 @@ public abstract class Pedido {
         System.out.println("se ha hecho "+contadorPedidos+" pedido");
     }
 
-    public void precioTotal(Pedido p){
+    public double precioTotal(){
         Iterator<Producto> it= listaProductos.iterator();
         double total=0.0;
         while (it.hasNext()){
             Producto aux=(Producto) it.next();
             total+=(aux.getPrecio()*aux.getCantidad());
         }
-
-        System.out.println(total + "€");
+        return total;
     }
 
     @Override
