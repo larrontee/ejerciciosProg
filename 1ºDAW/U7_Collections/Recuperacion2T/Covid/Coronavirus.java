@@ -25,6 +25,7 @@ public class Coronavirus {
         //covid.guardarPacientes();
         covid.cargarPacientes();
 
+
     }
     String nombreCientifico;
     Map<Character, Set<Paciente>> pacientes;

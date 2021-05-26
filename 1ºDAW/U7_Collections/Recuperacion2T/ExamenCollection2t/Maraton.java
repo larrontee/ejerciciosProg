@@ -72,6 +72,12 @@ public class Maraton {
 
     public void mostrarListaCategoria(Categoria cat){
         List<Atleta>atletas=new ArrayList<>(listaAtletas);
+        Collections.sort(atletas, new Comparator<Atleta>() {
+            @Override
+            public int compare(Atleta o1, Atleta o2) {
+                return o1.getCategoria().compareTo(o2.getCategoria());
+            }
+        });
         System.out.println(atletas);
     }
      public void mostrarListaPais(String p){
