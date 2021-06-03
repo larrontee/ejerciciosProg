@@ -14,7 +14,9 @@ public class Maraton {
         try {
             ObjectInputStream reader=new ObjectInputStream(new FileInputStream("maraton.dat"));
             while (true){
-                reader.readObject();
+                Atleta atleta;
+                atleta=(Atleta)reader.readObject();
+                listaAtletas.add(atleta);
             }
         } catch (Exception e) {
             e.printStackTrace();
