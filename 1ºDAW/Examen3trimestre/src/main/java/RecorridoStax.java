@@ -35,6 +35,7 @@ public class RecorridoStax {
                 XMLEvent e = xmlReader.nextEvent();
                 if (e.isStartElement()){
                     StartElement startTag= e.asStartElement();
+
                     if (startTag.getName().getLocalPart().equals("autor")){
                         dentro = true;
                     }
