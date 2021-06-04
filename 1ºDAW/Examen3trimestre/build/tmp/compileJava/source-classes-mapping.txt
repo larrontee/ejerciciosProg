@@ -1,9 +1,9 @@
 Customer.java
  Customer
-ConexionBd.java
- ConexionBd
 ModificacionDOM.java
  ModificacionDOM
+ConexionBd.java
+ ConexionBd
 Office.java
  Office
 Transacciones.java
@@ -14,3 +14,5 @@ Consultas.java
  Consultas
 RecorridoStax.java
  RecorridoStax
+StaxPrueba.java
+ StaxPrueba
