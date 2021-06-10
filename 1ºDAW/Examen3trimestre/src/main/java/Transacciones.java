@@ -17,58 +17,41 @@ public class Transacciones {
             con.setAutoCommit(false);
             String consulta = "INSERT into customers values (?,?,?,?,?,?,?,?,?,?,?,?,?);";
             PreparedStatement statement = con.prepareStatement(consulta);
-            Customer customer= new Customer(
-                    123456789,
-                    "Pedro",
-                    "Bondur",
-                    "Loui",
-                    "123456789",
-                    "calle",
-                    "barrio",
-                    "Lyon",
-                    "soltero",
-                    "69004",
-                    "France",
-                    1337,
-                    138500.00);
 
-            statement.setInt(1,customer.customerNumber);
-            statement.setString(2,customer.customerName);
-            statement.setString(3,customer.contactLastName);
-            statement.setString(4,customer.contactFirstName);
-            statement.setString(5,customer.phone);
-            statement.setString(6,customer.addressLine1);
-            statement.setString(7,customer.addressLine2);
-            statement.setString(8,customer.city);
-            statement.setString(9,customer.state);
-            statement.setString(10,customer.postalCode);
-            statement.setString(11,customer.country);
-            statement.setInt(12,customer.salesRepEmployeeNumber);
-            statement.setDouble(13,customer.creditLimit);
+            statement.setInt(1,600);
+            statement.setString(2,"larra");
+            statement.setString(3,"Bondur");
+            statement.setString(4,"Loui");
+            statement.setString(5,"123456789");
+            statement.setString(6,"calle");
+            statement.setString(7,"barrio");
+            statement.setString(8,"Lyon");
+            statement.setString(9,"Soltero");
+            statement.setString(10,"69004");
+            statement.setString(11,"France");
+            statement.setInt(12,1337);
+            statement.setDouble(13,138500.00);
+            String cadena = statement.toString();
             statement.executeUpdate();
             nfilasInsertadas++;
 
             String consulta2 = "INSERT into payments values (?,?,?,?);";
             PreparedStatement statement2 = con.prepareStatement(consulta2);
-            ResultSet rs2 = statement.executeQuery();
-            Payments p1 = new Payments(123456789,"123","2000-02-01",120.35);
-            Payments p2 = new Payments(123456789,"150","2020-05-05",200.35);
 
-            statement2.setInt(1,1234);
+            statement2.setInt(1,600);
             statement2.setString(2, "123");
             statement2.setString(3, "2000-02-01");
             statement2.setDouble(4, 120.35);
             statement2.executeUpdate();
             nfilasInsertadas++;
 
-            statement2.setInt(1,1234);
+            statement2.setInt(1,600);
             statement2.setString(2, "150");
             statement2.setString(3, "2020-05-05");
             statement2.setDouble(4, 200.35);
             statement2.executeUpdate();
             nfilasInsertadas++;
             con.commit();
-            con.rollback();
 
 
 
