@@ -73,5 +73,6 @@ public class StaxPrueba {
         System.out.println("Cantidad de plato del menu= "+ contador);
         System.out.println("Total calorias "+ caloriastotales);
         System.out.println(platoDef);
+
     }
 }

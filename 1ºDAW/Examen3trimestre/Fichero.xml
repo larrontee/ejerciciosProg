@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<equipo>
+    <jugador>
+        <nombre>Kobe</nombre>
+        <altura>1.89</altura>
+        <ptos>130</ptos>
+        <equipo>Lakers</equipo>
+    </jugador>
+    <jugador>
+        <nombre>Pedro</nombre>
+        <altura>1.85</altura>
+        <ptos>95</ptos>
+        <equipo>Tomares</equipo>
+    </jugador>
+    <jugador>
+        <nombre>Edu</nombre>
+        <altura>1.90</altura>
+        <ptos>150</ptos>
+        <equipo>Tomares</equipo>
+    </jugador>
+    <jugador>
+        <nombre>Pau</nombre>
+        <altura>2.20</altura>
+        <ptos>80</ptos>
+        <equipo>Barcelona</equipo>
+    </jugador>
+</equipo>

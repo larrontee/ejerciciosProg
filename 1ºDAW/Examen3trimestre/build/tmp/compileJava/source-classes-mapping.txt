@@ -1,19 +1,17 @@
-Customer.java
- Customer
 ModificacionDOM.java
  ModificacionDOM
 RecorridoStax.java
  RecorridoStax
 Office.java
  Office
-ConexionBd.java
- ConexionBd
-Payments.java
- Payments
-StaxPrueba.java
- StaxPrueba
 Transacciones.java
  Transacciones
 Consultas.java
  Consultas
  Consultas$1
+ConexionBd.java
+ ConexionBd
+StaxPrueba.java
+ StaxPrueba
+PracticaDom.java
+ PracticaDom

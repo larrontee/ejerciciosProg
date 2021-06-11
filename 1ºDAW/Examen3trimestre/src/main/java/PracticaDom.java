@@ -14,14 +14,13 @@ public class PracticaDom {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document doc = db.parse(new File("menu.xml"));
-            //mostrarXML(doc);
-            //cantidadPlatos(doc);
+            mostrarXML(doc);
+            cantidadPlatos(doc);
             platoMasCaro(doc);
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            ;
         }
     }
 
@@ -71,11 +70,9 @@ public class PracticaDom {
 
                 Element food = (Element) hijos.item(i);
                 NodeList nietos = hijos.item(i).getChildNodes();
-                System.out.println("<" + food.getTagName() + ">");
                 for (int j = 0; j < nietos.getLength(); j++) {
                     if (nietos.item(j).getNodeType() == Node.ELEMENT_NODE) {
                         Element caracteristica = (Element) nietos.item(j);
-                        System.out.println("    <" + caracteristica.getTagName() + ">");
                         if (caracteristica.getTagName().equals("price")){
                             nuevoPrecio=Double.parseDouble(caracteristica.getTextContent());
                             if (nuevoPrecio>precio){
@@ -90,6 +87,6 @@ public class PracticaDom {
                 }
             }
         }
-        System.out.println("Nombre "+nombreplato+" precio"+precio);
+        System.out.println("Nombre "+nombreplato+" precio "+precio);
     }
 }

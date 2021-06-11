@@ -74,7 +74,6 @@ public class RecorridoStax {
                         if (texto.getData().equals(aut)){
                             contador++;
                         }
-
                     }
                 }
             }
